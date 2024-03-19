@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/client/css/Style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Tarkhineh</title>
+  </head>
+  
+  <body>
+    <header class="nav">
+      <div class="nav__wrapper container block">
+        <div class="nav__toggler">
+          <svg class="icon">
+            <use xlink:href="/client/assets/images/navbar-sprit.svg#menu"></use>
+          </svg>
+        </div>
+        <div class="nav__logo">
+          <a href="/" data-link>
+            <svg class="icon">
+              <use
+                xlink:href="/client/assets/images/navbar-sprit.svg#logo"
+              ></use>
+            </svg>
+          </a>
+        </div>
+        <div class="nav__links">
+          <div class="nav__link first">
+            <a href="/" class="link" data-link>صفحه اصلی</a>
+          </div>
+          <div class="nav__link second branch-btn">
+            <button class="link btn">
+              <span class="text">شعبه</span>
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/navbar-sprit.svg#arrow-down"
+                ></use>
+              </svg>
+            </button>
+            <div class="nav__drop-down choose-branch">
+              <ul class="nav__lists">
+                <li class="nav__list">
+                  <a href="/ekbatan" data-link>اکباتان</a>
+                </li>
+                <li class="nav__list"><a href="/chalos" data-link>چالوس</a></li>
+                <li class="nav__list">
+                  <a href="/aghdasiyeh" data-link>اقدسیه</a>
+                </li>
+                <li class="nav__list"><a href="/vanak" data-link>ونک</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav__link third menu-btn">
+            <button class="link btn menu-btn">
+              منو
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/navbar-sprit.svg#arrow-down"
+                ></use>
+              </svg>
+            </button>
+            <div class="nav__drop-down choose-menu">
+              <ul class="nav__lists">
+                <li class="nav__list">
+                  <a href="/menu/main_dish" data-link>غذای اصلی</a>
+                </li>
+                <li class="nav__list">
+                  <a href="/menu/appetizer" data-link>پیش غذا</a>
+                </li>
+                <li class="nav__list">
+                  <a href="/menu/dessert" data-link>دسر</a>
+                </li>
+                <li class="nav__list">
+                  <a href="/menu/drink" data-link>نوشیدنی</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav__link forth">
+            <a href="/franchise" class="link" data-link>اعطای نمایندگی</a>
+          </div>
+          <div class="nav__link fifth">
+            <a href="/about-us" class="link" data-link>درباره ما</a>
+          </div>
+          <div class="nav__link sixth">
+            <a href="/contact-us" class="link" data-link>تماس با ما</a>
+          </div>
+        </div>
+        <div class="nav__items">
+          <span class="nav__item search">
+            <button class="search-btn btn">
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/navbar-sprit.svg#search-green"
+                ></use>
+              </svg>
+            </button>
+          </span>
+          <span class="nav__item shopping">
+            <a href="/shopping-cart" data-link>
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/navbar-sprit.svg#shopping-cart"
+                ></use>
+              </svg>
+            </a>
+          </span>
+          <span class="nav__item user">
+            <a href="/profile" data-link>
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/navbar-sprit.svg#user"
+                ></use>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <div id="app" class="">
+      <div id="main-div"></div>
+
+      <footer class="footer">
+        <div class="footer-wrapper container block">
+          <div class="footer__column">
+            <h3 class="footer__heading">دسترسی آسان</h3>
+            <div class="footer__links">
+              <a href="/faq" class="footer__link" data-link>پرسش‌ های متداول</a>
+              <a href="/rules" class="footer__link" data-link>قوانین ترخینه</a>
+              <a href="/privacy" class="footer__link" data-link>حریم خصوصی</a>
+              <div class="footer__icons">
+                <a href="/telegram.com" class="social-link" data-link>
+                  <svg class="icon">
+                    <use
+                      xlink:href="/client/assets/images/footer-sprite.svg#Footer-icons-1"
+                    ></use>
+                  </svg>
+                </a>
+                <a href="/instagram.com" class="social-link" data-link>
+                  <svg class="icon">
+                    <use
+                      xlink:href="/client/assets/images/footer-sprite.svg#Footer-icons-2"
+                    ></use>
+                  </svg>
+                </a>
+                <a href="/x.com" class="social-link" data-link>
+                  <svg class="icon">
+                    <use
+                      xlink:href="/client/assets/images/footer-sprite.svg#Footer-icons-3"
+                    ></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__heading">شعبه های ترخینه</h3>
+            <div class="footer__links">
+              <a href="/ekbatan" class="footer__link" data-link>شعبه اکباتان</a>
+              <a href="/chalos" class="footer__link" data-link>شعبه چالوس</a>
+              <a href="/aghdasiyeh" class="footer__link" data-link
+                >شعبه اقدسیه</a
+              >
+              <a href="/vanak" class="footer__link" data-link>شعبه ونک</a>
+            </div>
+          </div>
+          <div class="footer__column form">
+            <h3 class="footer__heading">پیام به ترخینه</h3>
+            <form class="footer__form">
+              <div class="form__info">
+                <input
+                  type="text"
+                  class="form__input"
+                  placeholder="نام و نام خانوادگی"
+                />
+                <input
+                  type="text"
+                  class="form__input"
+                  placeholder="شماره تماس"
+                />
+                <input
+                  type="text"
+                  class="form__input"
+                  placeholder="آدرس ایمیل (اختیاری)"
+                />
+              </div>
+              <div class="form__msg">
+                <textarea
+                  class="form__text"
+                  cols="30"
+                  rows="5"
+                  placeholder="پیام شما"
+                ></textarea>
+                <button class="form__btn">ارسال پیام</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="show-image">
+      <img class="large-image" src="" alt="" />
+      <button class="close-image-btn btn">
+        <img src="/client/assets/images/close-icon.png" alt="" />
+      </button>
+    </div>
+
+    <div class="show-search" style="display: none">
+      <div class="search__header">
+        <span class="title">جستجو</span>
+        <button class="close-search-btn">
+          <img
+            class="icon"
+            src="/client/assets/images/close-icon-bl.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="search__body">
+        <span class="text"
+          >لطفا متن خود را تایپ و سپس دکمه Enter را بزنید.</span
+        >
+        <div class="search__detail">
+          <input class="input" type="text" placeholder="جستجو" />
+          <svg class="icon">
+            <use
+              xlink:href="/client/assets/images/header-sprite.svg#search-normal"
+            ></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-toggler" style="display: none">
+      <div class="toggler__header">
+        <svg class="toggler__logo icon">
+          <use
+            xlink:href="/client/assets/images/toggler-sprit.svg#toggler-logo"
+          ></use>
+        </svg>
+        <button class="close-toggler-btn btn">
+          <svg class="icon">
+            <use
+              xlink:href="/client/assets/images/toggler-sprit.svg#close-icon"
+            ></use>
+          </svg>
+        </button>
+      </div>
+      <div class="toggler__body">
+        <ul class="toggler__lists">
+          <li id="main" class="toggler__list toggler__link selected">
+            <div>
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/toggler-sprit.svg#main"
+                ></use>
+              </svg>
+              <a href="/" class="toggler__text" data-link>صفحه اصلی</a>
+            </div>
+          </li>
+
+          <li id="menu" class="toggler__list t-menu">
+            <div class="toggler__dropdown">
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/toggler-sprit.svg#menu"
+                ></use>
+              </svg>
+              <span class="toggler__text">منو</span>
+              <svg class="icon buttom-arrow">
+                <use
+                  xlink:href="/client/assets/images/toggler-sprit.svg#buttom-arrow"
+                ></use>
+              </svg>
+            </div>
+            <ul class="toggler__menues" style="display: none">
+              <li class="toggler__menu toggler__link">
+                <a href="/menu/main_dish" data-link>غذای اصلی</a>
+              </li>
+              <li class="toggler__menu toggler__link">
+                <a href="/menu/appetizer" data-link>پیش غذا</a>
+              </li>
+              <li class="toggler__menu toggler__link">
+                <a href="/menu/dessert" data-link>دسر</a>
+              </li>
+              <li class="toggler__menu toggler__link">
+                <a href="/menu/drink" data-link>نوشیدنی</a>
+              </li>
+            </ul>
+          </li>
+
+          <li id="branch" class="toggler__list t-branch">
+            <div class="toggler__dropdown">
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/toggler-sprit.svg#branch"
+                ></use>
+              </svg>
+              <span class="toggler__text">شعبه</span>
+              <svg class="icon buttom-arrow">
+                <use
+                  xlink:href="/client/assets/images/toggler-sprit.svg#buttom-arrow"
+                ></use>
+              </svg>
+            </div>
+            <ul class="toggler__branches" style="display: none">
+              <li class="toggler__branch toggler__link">
+                <a href="/ekbatan" data-link>اکباتان</a>
+              </li>
+              <li class="toggler__branch toggler__link">
+                <a href="/aghdasiyeh" data-link>اقدسیه</a>
+              </li>
+              <li class="toggler__branch toggler__link">
+                <a href="/chalos" data-link>چالوس</a>
+              </li>
+              <li class="toggler__branch toggler__link">
+                <a href="/vanak" data-link>ونک</a>
+              </li>
+            </ul>
+          </li>
+
+          <li id="about-us" class="toggler__list toggler__link">
+            <div>
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/toggler-sprit.svg#about-us"
+                ></use>
+              </svg>
+              <a href="/about-us" class="toggler__text" data-link>درباره ما</a>
+            </div>
+          </li>
+
+          <li id="contact-us" class="toggler__list toggler__link">
+            <div>
+              <svg class="icon">
+                <use
+                  xlink:href="/client/assets/images/toggler-sprit.svg#contact-us"
+                ></use>
+              </svg>
+              <a href="/contact-us" class="toggler__text" data-link
+                >تماس با ما</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="show-info" style="display: none">
+      <!-- <div class="show-info__header">
+        <span class="show-info__heading">اطلاعات محصول</span>
+        <button class="show-info__close-btn btn">
+          <img
+            class="icon"
+            src="/client/assets/images/close-icon-bl.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <img
+        src="/client/assets/images/menu-card-image.jfif"
+        alt=""
+        class="show-info__image"
+      />
+      <div class="show-info__footer">
+        <span class="show-info__title">کوفته برنجی</span>
+        <span class="show-info__detail"
+          >برنج سبزی کوفته لپه آرد نخودچی، گردو و زرشک و آلو پیاز</span
+        >
+        <svg class="show-info__icon">
+          <use xlink:href="/client/assets/images/rate-sprite.svg#rate-4"></use>
+        </svg>
+        <span class="show-info__rate">(۷۵ نظر)</span>
+      </div> -->
+    </div>
+
+    <script type="module" src="/client/js/app.js"></script>
+  </body>
+</html>
